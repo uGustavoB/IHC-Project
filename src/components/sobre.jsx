@@ -32,7 +32,7 @@ export default function Sobre() {
         <section className="mb-16">
           <div className="prose prose-lg dark:prose-invert mx-auto">
               <p className="text-center text-lg text-muted-foreground">
-                Bem-vindo ao Gourmet Restaurant, um espaço onde a tradição encontra a inovação. Nossa história começou em
+                Bem-vindo ao Sabor de Brasil, um espaço onde a tradição encontra a inovação. Nossa história começou em
                 1985, quando a família Silva decidiu transformar sua paixão pela culinária em um restaurante que
                 celebrasse os sabores autênticos da gastronomia brasileira.
               </p>

@@ -47,7 +47,7 @@ export default function Header() {
               }}
               className="mr-2"
             />
-            <span className="font-bold sm:inline-block ml-6 hover:text-foreground/80">Gourmet Restaurant</span>
+            <span className="font-bold sm:inline-block ml-6 hover:text-foreground/80">Sabor de Brasil</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium ml-6">
             {navigation.map((item, index) => (

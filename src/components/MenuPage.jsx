@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { LazyLoadImage } from "react-lazy-load-image-component"
+import { toast } from 'react-toastify';
 
 const menuItems = {
   entradas: {
@@ -75,6 +76,18 @@ const menuItems = {
   },
 }
 
+const toastLoading = async () => {
+  const id = toast.loading(`Carregando mais pratos`);
+
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
+  toast.update(id, { render: "Erro ao carregar mais items.", type: "error", isLoading: false });
+
+  await new Promise((resolve) => setTimeout(resolve, 4000));
+
+  toast.dismiss(id);
+}
+
 export default function MenuPage() {
   return (
     <section className="container mx-auto px-4 py-8" id="menu">
@@ -128,6 +141,7 @@ export default function MenuPage() {
                   <Button
                     variant="outline"
                     className="mt-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => toastLoading(category)}
                   >
                     Mais {category === 'entradas' ? 'entradas' : category === 'principal' ? 'pratos principais' : 'sobremesas'}
                   </Button>
