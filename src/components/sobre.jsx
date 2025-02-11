@@ -25,8 +25,8 @@ const values = [
 
 export default function Sobre() {
   return (
-    <main className="container mx-auto px-4 py-8" id="sobre">
-      <div className="max-4xl mx-auto">
+    <main className="container mx-auto py-8" id="sobre">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-12 underline decoration-2">Sobre Nós</h1>
 
         <section className="mb-16">
@@ -41,7 +41,7 @@ export default function Sobre() {
 
         <section className="">
           <h2 className="text-3xl font-bold text-center mb-8">Conheça Nossos Valores</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2">
             {values.map((value, index) => (
               <Card key={index} className="text-center">
                 <CardContent className="pt-6">
